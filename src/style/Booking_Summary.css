@@ -1,0 +1,89 @@
+.navigationDiv {
+    height: 14rem;
+}
+
+
+.navBtn {
+    border-radius: 50%;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    color: white;
+    background: #D3B0FF;
+    border: none;
+}
+
+.navLine {
+    width: 15em;
+    color: #D3B0FF;
+    font-weight: bold;
+    border-top: 3px solid #D3B0FF;
+}
+
+.navLink {
+    width: 57em;
+    margin-top: 1rem;
+}
+
+.summaryDiv {
+    min-height: 90vh;
+    max-height: max-content;
+    background: #F8F9FD;
+}
+
+.summary {
+    /* border: 2px solid red; */
+    height: 233px;
+}
+
+.weight,
+.load,
+.seller,
+.insurance {
+    /* width: 232px; */
+    height: 17rem;
+}
+
+.price_details {
+    height: 48rem;
+}
+
+.box {
+    background: #FFFFFF;
+    box-shadow: 0px 196px 78px rgba(21, 31, 72, 0.01), 0px 110px 66px rgba(21, 31, 72, 0.05), 0px 49px 49px rgba(21, 31, 72, 0.09), 0px 12px 27px rgba(21, 31, 72, 0.1), 0px 0px 0px rgba(21, 31, 72, 0.1);
+    border-radius: 14px;
+}
+
+.info {
+    position: relative;
+}
+
+#plane {
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    /* right:50%; */
+}
+
+
+.details {
+    font-size: 1.3rem;
+    color: #808080;
+
+}
+
+#additional_detail {
+    font-size: 1.2rem;
+    color: #808080;
+}
+
+.checkBtn {
+    background: #9747FF;
+    color: white;
+    width: 100%;
+    margin-top: 4rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}

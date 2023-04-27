@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.homeDiv {
+    /* border: 2px solid rgb(69, 168, 244); */
+    height: 70vh;
+    background: #F8F9FD;
+}
+
+.childHomeDiv {
+    /* border: 2px solid rgb(69, 168, 244); */
+    height: 100%;
+    font-family: 'Figtree';
+}
+
+.childHomeDiv h1 {
+    font-size: 3.2rem;
+    font-weight: 600;
+}
+
+.childHomeDiv p {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.infoDiv {
+    /* border: 2px solid red; */
+    height: 8.2rem;
+    margin-top: 4rem;
+    background: #FFFFFF;
+    box-shadow: 296px 536px 245px rgba(21, 31, 72, 0.01), 167px 302px 207px rgba(21, 31, 72, 0.05), 74px 134px 153px rgba(21, 31, 72, 0.09), 19px 34px 84px rgba(21, 31, 72, 0.1), 0px 0px 0px rgba(21, 31, 72, 0.1);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.infoDiv ul {
+    width: 100%;
+    margin: 0;
+}
+
+.infoDiv li p {
+    font-family: 'Figtree';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 120%;
+    color: #868686;
+}
+
+.infoDiv input {
+    border: none;
+    outline: none;
+    font-family: 'Figtree';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 120%;
+    color: #868686;
+}
+
+.rightBtn {
+    background: #9747FF;
+    border-radius: 4px;
+    color: white;
+    padding: 1px 4px;
+    border: none;
+}
+
+.servicesDiv {
+    /* border: 2px solid rgb(13, 177, 10); */
+    height: 24rem;
+    margin-top: 4rem;
+    font-family: 'Figtree';
+}
+
+.servicesDiv h2 {
+    font-size: 3.3rem;
+    font-weight: 600;
+}
+
+.cardDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.servicesCard {
+    /* border: 2px solid red; */
+    width: 331px;
+    height: 175px;
+    gap: 20px;
+    background: #FFFFFF;
+    box-shadow: 0px 146px 58px rgba(0, 0, 0, 0.01), 0px 82px 49px rgba(0, 0, 0, 0.05), 0px 36px 36px rgba(0, 0, 0, 0.09), 0px 9px 20px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    font-family: 'Figtree';
+}
+
+.servicesCard p:nth-child(1) {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 130%;
+    text-align: center;
+}
+
+.servicesCard p:nth-child(3) {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
+}
+
+#line {
+    border-top: 3px solid black;
+}

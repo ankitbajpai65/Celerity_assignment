@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* .footerDiv {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+} */
+
+.footerDiv img {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#wave-1 {
+    z-index: 2;
+}
+
+#wave-2 {
+    z-index: 1;
+}
