@@ -5,8 +5,11 @@ import plane from '../images/plane.png'
 import weight from '../images/weight.png'
 import boat from '../images/boat.png'
 import pallets from '../images/pallets.png'
+import { useLocation } from 'react-router-dom';
 
 const Booking_Summary = () => {
+  const location = useLocation();
+  console.log(location.state);
   return (
     <div className='summaryDiv pb-5'>
       <div className='navigationDiv d-flex flex-column align-items-center justify-content-center'>
@@ -34,14 +37,14 @@ const Booking_Summary = () => {
             <div className="d-flex align-flex-start m-auto p-5 mt-4 w-75 info">
               <div className='text-center'>
                 <img src={origin} alt="" />
-                <h4 className='mt-4'>Delhi,</h4>
-                <h4>110003 India</h4>
+                <h4 className='mt-4'>{location.state.origin}</h4>
+                {/* <h4>110003 India</h4> */}
               </div>
               <hr className="w-100" id="line" />
               <div className='text-center'>
                 <img src={origin} alt="" />
-                <h4 className='mt-4'>Shanghai</h4>
-                <h4>200080, China</h4>
+                <h4 className='mt-4'>{location.state.destination}</h4>
+                {/* <h4>200080, China</h4> */}
               </div>
               <img src={plane} alt="" id="plane" className='mb-3' />
             </div>
@@ -50,7 +53,7 @@ const Booking_Summary = () => {
             <div className="col-4 weight box p-4 text-center">
               <h4 className="fw-normal">Total Weight/Volume</h4>
               <img src={weight} alt="" className='m-3' />
-              <h4 className="fw-semibold">114.21KG</h4>
+              <h4 className="fw-semibold">{location.state.load}</h4>
             </div>
             <div className="col-8 load box p-4">
               <h4>Seller: Primetime Worldwide</h4>

@@ -7,15 +7,19 @@ const Home = () => {
     const navigate = useNavigate()
     const [data, setData] = useState({
         origin: "",
-        dest: "",
-        data: "",
+        destination: "",
+        date: "",
         load: ""
     })
     const inputEvent = (e) => {
+        let name = e.target.name;
+        let value = e.target.value;
         console.log(e.target.name, e.target.value);
+        setData({ ...data, [name]: value });
     }
     const submitForm = () => {
-        navigate('/booking_summary')
+        // setData({ [name]})
+        navigate('/booking_summary', { state: data })
     }
     return (
         <>
