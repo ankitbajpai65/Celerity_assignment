@@ -31,15 +31,13 @@
 }
 
 .summary {
-    /* border: 2px solid red; */
-    height: 233px;
+    height: 24rem;
 }
 
 .weight,
 .load,
 .seller,
 .insurance {
-    /* width: 232px; */
     height: 17rem;
 }
 
@@ -61,7 +59,6 @@
     position: absolute;
     top: 1rem;
     left: 50%;
-    /* right:50%; */
 }
 
 

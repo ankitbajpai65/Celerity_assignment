@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import '../style/Home.css'
 import WavyFooter from './WavyFooter'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Home = () => {
     const navigate = useNavigate()
@@ -14,12 +16,25 @@ const Home = () => {
     const inputEvent = (e) => {
         let name = e.target.name;
         let value = e.target.value;
-        console.log(e.target.name, e.target.value);
+        // console.log(name, value);
         setData({ ...data, [name]: value });
     }
+    function removeVal() {
+        document.querySelectorAll('.input').forEach(element => {
+            element.value = "";
+        });
+    }
     const submitForm = () => {
-        // setData({ [name]})
+        const { origin, dest, date, load } = data;
+        if (origin === '' || dest === '' || date === '' || load === '') {
+            toast.error("Please fill all details!", {
+                position: "top-center",
+                theme: "dark"
+            });
+            return false;
+        }
         navigate('/booking_summary', { state: data })
+        setTimeout(removeVal, 500);
     }
     return (
         <>
@@ -29,27 +44,27 @@ const Home = () => {
                         <h1>Hassle-Free Shipping Solutions</h1>
                         <p>Compare, book, and manage your freight across the world’s top logistics providers, all on one platform.</p>
                     </div>
-                    <div className="infoDiv container">
+                    <div className="form container">
                         <ul className='list-unstyled d-flex align-items-center justify-content-between p-3'>
                             <li>
-                                <i class="bi bi-geo-alt fs-4 me-3"></i>
-                                <input type="text" placeholder="Origin,Port,City" onChange={inputEvent} name="origin" />
+                                <i className="bi bi-geo-alt fs-4 me-3"></i>
+                                <input type="text" placeholder="Origin,Port,City" onChange={inputEvent} name="origin" className='input' />
                             </li>
                             <li>
-                                <i class="bi bi-geo-alt fs-4 me-3"></i>
-                                <input type="text" placeholder="Destination,Port,City" onChange={inputEvent} name="destination" />
+                                <i className="bi bi-geo-alt fs-4 me-3"></i>
+                                <input type="text" placeholder="Destination,Port,City" onChange={inputEvent} name="destination" className='input' />
                             </li>
                             <li>
-                                <i class="bi bi-calendar4 fs-4 me-3"></i>
-                                <input type="text" placeholder="13 April 2023" onChange={inputEvent} name="date" />
+                                <i className="bi bi-calendar4 fs-4 me-3"></i>
+                                <input type="text" placeholder="13 April 2023" onChange={inputEvent} name="date" className='input' />
                             </li>
                             <li>
-                                <i class="bi bi-cloud-arrow-down fs-4 me-3"></i>
-                                <input type="text" placeholder="Load" onChange={inputEvent} name="load" />
+                                <i className="bi bi-cloud-arrow-down fs-4 me-3"></i>
+                                <input type="text" placeholder="Load" onChange={inputEvent} name="load" className='input' />
                             </li>
                             <li>
                                 <button className="rightBtn" onClick={submitForm}>
-                                    <i class="bi bi-arrow-right fs-4 fw-bold"></i>
+                                    <i className="bi bi-arrow-right fs-4 fw-bold"></i>
                                 </button>
                             </li>
                         </ul>
@@ -83,6 +98,7 @@ const Home = () => {
                 </div>
             </div>
             <WavyFooter />
+            <ToastContainer />
         </>
     )
 }
